@@ -10,9 +10,11 @@ mod_ward - Apache protection for a new era.
 /* The sample content handler */
 static int ward_handler(request_rec *r)
 {
+/*  Removed as we want to process on every request
     if (strcmp(r->handler, "ward")) {
         return DECLINED;
     }
+*/
     r->content_type = "text/html";      
 
     if (!r->header_only)
